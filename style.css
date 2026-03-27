@@ -849,179 +849,137 @@ footer{
 }
 
 /* =========================================  GLOBAL MOBILE OPTIMIZATION  =================================================== */
-@media (max-width: 768px) {
+/* =========================
+   COMPLETE MOBILE FIX
+========================= */
+@media (max-width:768px){
 
-  /* GENERAL */
-  body {
-    overflow-x: hidden;
-    padding: 0 10px;
+  body{
+    overflow-x:hidden;
   }
 
-  section {
-    padding: 80px 15px;
+  section{
+    padding:80px 15px;
+    scroll-margin-top:80px;
   }
 
-  .section-title {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 25px;
+  .section-title{
+    text-align:center;
+    font-size:24px;
+    margin-bottom:25px;
   }
 
-  /* =========================
-     NAVBAR
-  ========================= */
-  nav {
-    padding: 12px 15px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  /* ===== NAVBAR ===== */
+  header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#081b29;
   }
 
-  .nav-links {
-    display: flex;
-    gap: 15px;
-    font-size: 13px;
-    flex-wrap: wrap;
-    justify-content: center;
+  nav{
+    padding:12px 10px;
   }
 
-  /* =========================
-     HERO SECTION
-  ========================= */
-  .hero {
-    display: flex;
-    flex-direction: column-reverse; /* profile first */
-    align-items: center;
-    text-align: center;
-    gap: 30px;
+  .nav-links{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    max-width:320px;
+    margin:auto;
   }
 
-  .hero-text h1 {
-    font-size: 26px;
+  .nav-links a{
+    font-size:13px;
+    padding:5px 8px;
+  }
+
+  /* ===== HERO (PROFILE FIRST) ===== */
+  .hero{
+    display:flex;
+    flex-direction:column-reverse;
+    align-items:center;
+    text-align:center;
+    gap:30px;
+  }
+
+  .hero-text h1{
+    font-size:28px;
   }
 
   .hero-tagline,
-  .hero-desc {
-    font-size: 14px;
-    line-height: 1.5;
+  .hero-desc{
+    font-size:14px;
   }
 
-  .buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
+  .buttons{
+    justify-content:center;
+    flex-wrap:wrap;
   }
 
-  .profile-img {
-    width: 180px;
-    height: 180px;
+  .profile-img{
+    width:200px;
+    height:200px;
   }
 
-  /* =========================
-     SKILLS SECTION
-  ========================= */
-  .skills-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+  /* ===== SKILLS ===== */
+  .skills-container{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
   }
 
-  .skill-card {
-    padding: 12px;
-    font-size: 13px;
-    text-align: center;
+  .skill-card{
+    padding:12px;
+    font-size:13px;
   }
 
-  /* =========================
-     PROJECT SECTION
-  ========================= */
-  .projects-wrapper {
-    padding: 30px 10px;
+  /* ===== PROJECTS ===== */
+  .projects-wrapper{
+    padding:30px 15px;
   }
 
-  .projects-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+  .projects-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
   }
 
-  .project-card {
-    width: 100%;
-    max-width: 320px;
-    border-radius: 15px;
+  .project-card{
+    width:100%;
+    max-width:320px;
   }
 
-  .project-image img {
-    width: 100%;
-    height: 170px;
-    object-fit: cover;
-    border-radius: 12px 12px 0 0;
+  /* ===== CERTIFICATIONS ===== */
+  .certifications-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
   }
 
-  .project-content {
-    padding: 14px;
+  .cert-card{
+    width:100%;
+    max-width:300px;
+    padding:20px;
   }
 
-  .project-content h3 {
-    font-size: 17px;
+  /* ===== CONTACT ===== */
+  .contact-container{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
   }
 
-  .project-content p {
-    font-size: 13px;
-    line-height: 1.5;
-  }
-
-  .tech-stack {
-    font-size: 12px;
-  }
-
-  .project-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-top: 10px;
-  }
-
-  .btn-demo,
-  .btn-github {
-    padding: 8px 14px;
-    font-size: 13px;
-  }
-
-  /* =========================
-     CERTIFICATIONS
-  ========================= */
-  .certifications-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .cert-card {
-    width: 100%;
-    max-width: 320px;
-  }
-
-  /* =========================
-     CONTACT SECTION
-  ========================= */
-  .contact-container {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-  }
-
-  form {
-    width: 100%;
+  form{
+    width:100%;
   }
 
   input,
-  textarea {
-    font-size: 14px;
+  textarea{
+    font-size:14px;
   }
 
 }
