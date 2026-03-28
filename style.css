@@ -2,8 +2,6 @@
 html{
   scroll-behavior:smooth;
 }
-
-/* Apply snap only on larger sections */
 body{
   scroll-snap-type:y proximity; /* smooth, not aggressive */
   overflow-y:scroll;
