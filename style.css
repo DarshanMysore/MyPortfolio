@@ -862,6 +862,17 @@ footer{
     font-size:24px;
     margin-bottom:25px;
   }
+  .certifications-container{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .cert-card{
+    width:90%;
+    max-width:320px;
+  }
+
+}
 
   /* ===== NAVBAR ===== */
   header{
@@ -948,18 +959,26 @@ footer{
 
   /* ===== CERTIFICATIONS ===== */
   .certifications-container{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:20px;
-  }
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  flex-wrap:wrap; /* IMPORTANT */
+}
 
-  .cert-card{
-    width:100%;
-    max-width:300px;
-    padding:20px;
-  }
+.cert-card{
+  width:300px;
+  max-width:100%;
+  padding:20px;
+  border-radius:15px;
+}
+.cert-card ul{
+  padding-left:15px;
+}
 
+.cert-card li{
+  word-wrap:break-word;
+  line-height:1.5;
+}
   /* ===== CONTACT ===== */
   .contact-container{
     display:flex;
