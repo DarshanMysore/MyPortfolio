@@ -529,6 +529,10 @@ nav a.active{
   background:#0f172a;
   padding:40px;
   border-radius:20px;
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  flex-wrap:wrap; /* allows wrapping */
 }
 
 .cert-row{
@@ -963,6 +967,7 @@ footer{
   justify-content:center;
   gap:25px;
   flex-wrap:wrap; /* IMPORTANT */
+  flex-direction:column;
 }
 
 .cert-card{
