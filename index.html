@@ -6,20 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Darshan P</title>
   <meta name="description" content="Darshan P | Full Stack Developer (Fresher) Portfolio" />
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
+  <!----------------------------------------------------- HEADER --------------------------------------------------------------->
   <header>
     <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#certifications">Certifications</a>
-      <a href="#contact">Contact</a>
+  <!-- Sidebar Menu -->
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
     </nav>
   </header>
 
@@ -29,7 +33,7 @@
 
     <span class="role">Backend-Focused Full Stack Developer</span>
 
-    <h1 id="typing-name"></h1>
+    <h1>Hi, I'm <span id="typing-name"></span></h1>
 
     <p class="hero-tagline">
       MCA graduate building scalable and high-performance web applications with strong backend foundations.
@@ -51,13 +55,13 @@
   <div class="hero-image">
     <div class="profile-glass">
       <div class="profile-wrapper">
-        <img src="profile(1).jpeg" alt="Darshan P" class="profile-img">
+        <img src="../assets/profile(1).jpeg" alt="Darshan P" class="profile-img">
       </div>
 
       <p class="profile-name">Darshan P</p>
       <p class="profile-role">Full Stack Developer</p>
 
-      <a href="Darshan_resume 3.pdf" class="btn resume-btn" download>
+      <a href="../assets/Darshan.P_Resume.pdf" class="btn resume-btn" download>
         Download Resume
       </a>
     </div>
@@ -206,7 +210,7 @@
       <!-- Project 1 -->
       <div class="project-card">
         <div class="project-image">
-          <img src="healthcare.webp" alt="Medical Chatbot">
+          <img src="../assets/healthcare.webp" alt="Medical Chatbot">
         </div>
 
         <div class="project-content">
@@ -235,7 +239,7 @@
       <!-- Project 2 -->
       <div class="project-card">
         <div class="project-image">
-          <img src="voting.jpg" alt="Voting System">
+          <img src="../assets/voting.jpg" alt="Voting System">
         </div>
 
         <div class="project-content">
@@ -278,9 +282,9 @@
     <span class="platform-name">UDEMY</span>
   </div>
         <ul>
-          <li onclick="openModal('udemy java.jpeg')">Java Beginners Course</li>
-          <li onclick="openModal('udemy2.jpg')">Front-End Bootcamp</li>
-          <li onclick="openModal('udemy3.jpg')">Python Full Stack Development</li>
+          <li onclick="openModal('../assets/udemy java.jpeg')">Java Beginners Course</li>
+          <li onclick="openModal('../assets/udemy2.jpg')">Front-End Bootcamp</li>
+          <li onclick="openModal('../assets/udemy3.jpg')">Python Full Stack Development</li>
         </ul>
       </div>
 
@@ -291,9 +295,9 @@
   </div>
 
   <ul>
-    <li onclick="openModal('cloudcertificate.jpeg')">AWS Cloud Certificate</li>
-    <li onclick="openModal('cybersecuritycertificate.jpeg')">Cyber Security Certificate</li>
-    <li onclick="openModal('figma certificate.jpeg')">UI/UX With Figma Certificate</li>
+    <li onclick="openModal('../assets/cloudcertificate.jpeg')">AWS Cloud Certificate</li>
+    <li onclick="openModal('../assets/cybersecuritycertificate.jpeg')">Cyber Security Certificate</li>
+    <li onclick="openModal('../assets/figma certificate.jpeg')">UI/UX With Figma Certificate</li>
   </ul>
 </div>
 
@@ -303,9 +307,9 @@
     <span class="platform-name">WORKSHOPS</span>
   </div>
         <ul>
-          <li onclick="openModal('nptl.jpeg')">Soft Skill Development (NPTL)</li>
-          <li onclick="openModal('Ai.jpeg')">Generative AI and Agentic AI</li>
-          <li onclick="openModal('softskill.jpeg')">Be Employable Professional Skill</li>
+          <li onclick="openModal('../assets/nptl.jpeg')">Soft Skill Development (NPTL)</li>
+          <li onclick="openModal('../assets/Ai.jpeg')">Generative AI and Agentic AI</li>
+          <li onclick="openModal('../assets/softskill.jpeg')">Be Employable Professional Skill</li>
         </ul>
       </div>
 
@@ -330,7 +334,9 @@
 
        <textarea name="message" placeholder="Your Message" required></textarea>
 
-       <button type="submit" class="btn">Send Message</button>
+       <div class="btn-wrapper">
+      <button type="submit" class="send-btn">Send Message</button>
+    </div>
 
       </form>
       <p id="form-status"></p>
@@ -361,6 +367,13 @@
        <i class="fab fa-github"></i>
        </a>
 
+       <a href="https://twitter.com/@darshh_mysore"
+   target="_blank"
+   class="social-icon twitter"
+   data-tooltip="Twitter">
+   <i class="fab fa-twitter"></i>
+</a>
+
        <a href="https://instagram.com/darshan_19._"
        target="_blank"
        class="social-icon instagram"
@@ -378,24 +391,25 @@
   </footer>
 
   <script>
-     const text = "Hi, I'm Darshan P";
-     const typingElement = document.getElementById("typing-name");
-     let index = 0;
+setTimeout(() => {
+  const el = document.getElementById("typing-name");
+  if (!el) return;
 
-     function typeEffect() {
-     if (index < text.length) {
-      typingElement.textContent += text.charAt(index);
-      index++;
-      setTimeout(typeEffect, 85); // smooth speed
-    } else {
-      typingElement.classList.add("done");
+  const text = "Darshan P";
+  let i = 0;
+
+  function type() {
+    if (i < text.length) {
+      el.innerHTML += text[i];
+      i++;
+      setTimeout(type, 80);
     }
   }
 
-  window.addEventListener("load", () => {
-    setTimeout(typeEffect, 400); // small delay before start
-  });
-
+  type();
+}, 500);
+</script>
+  <script>
   /* certificate JS*/
 
   const modal = document.getElementById("certModal");
@@ -464,7 +478,6 @@
   });
 
   const sections = document.querySelectorAll("section");
-  const navLinks = document.querySelectorAll("nav a");
 
   window.addEventListener("scroll", () => {
     let current = "";
@@ -483,6 +496,36 @@
       if (link.getAttribute("href") === "#" + current) {
         link.classList.add("active");
       }
+    });
+  });
+
+  toggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+const menu = document.querySelector('.nav-links');
+const toggle = document.querySelector('.menu-toggle');
+const overlay = document.querySelector('.overlay');
+
+toggle.onclick = () => {
+  menu.classList.toggle('active');
+  overlay.classList.toggle('active');
+};
+
+overlay.onclick = () => {
+  menu.classList.remove('active');
+  overlay.classList.remove('active');
+};
+  const toggle = document.getElementById("menu-toggle");
+  const nav = document.getElementById("nav-links");
+
+  toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+
+  // auto close on click
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("active");
     });
   });
 </script>
