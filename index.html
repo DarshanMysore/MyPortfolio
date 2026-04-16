@@ -409,9 +409,8 @@ setTimeout(() => {
   type();
 }, 500);
 </script>
-  <script>
-  /* certificate JS*/
-
+<script>
+  
   const modal = document.getElementById("certModal");
   const modalImg = document.getElementById("modalImage");
   const closeBtn = document.querySelector(".close");
@@ -478,6 +477,7 @@ setTimeout(() => {
   });
 
   const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll("nav a");
 
   window.addEventListener("scroll", () => {
     let current = "";
@@ -496,36 +496,6 @@ setTimeout(() => {
       if (link.getAttribute("href") === "#" + current) {
         link.classList.add("active");
       }
-    });
-  });
-
-  toggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-  });
-const menu = document.querySelector('.nav-links');
-const toggle = document.querySelector('.menu-toggle');
-const overlay = document.querySelector('.overlay');
-
-toggle.onclick = () => {
-  menu.classList.toggle('active');
-  overlay.classList.toggle('active');
-};
-
-overlay.onclick = () => {
-  menu.classList.remove('active');
-  overlay.classList.remove('active');
-};
-  const toggle = document.getElementById("menu-toggle");
-  const nav = document.getElementById("nav-links");
-
-  toggle.addEventListener("click", () => {
-    nav.classList.toggle("active");
-  });
-
-  // auto close on click
-  document.querySelectorAll(".nav-links a").forEach(link => {
-    link.addEventListener("click", () => {
-      nav.classList.remove("active");
     });
   });
 </script>
