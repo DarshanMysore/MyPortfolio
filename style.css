@@ -44,7 +44,7 @@ body{
 
 /*------------------------Header--------------------------*/
 header{
-  position:fixed;
+  /* position:fixed;
   top:0;
   left:0;
   right:0;
@@ -54,7 +54,7 @@ header{
   padding:20px 60px;
   background:rgba(7,16,34,0.95);
   backdrop-filter:blur(8px);
-  z-index:100;
+  z-index:100; */
 }
 
 nav a{
